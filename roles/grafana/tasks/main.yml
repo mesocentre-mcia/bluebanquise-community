@@ -104,7 +104,7 @@
 - name: grafana █ Ensure password is set to the one in the role variables
   ansible.builtin.command: "grafana-cli --homepath {{ grafana_homepath }} admin reset-admin-password {{ grafana_security.admin_password }}"
   changed_when: false
-  no_log: true
+  #no_log: true
   register: grafana_cli_var
   ignore_errors: true
 
