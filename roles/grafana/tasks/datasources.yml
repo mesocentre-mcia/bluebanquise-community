@@ -14,4 +14,5 @@
     database: "{{ item.database | default(omit) }}"
     user: "{{ item.user | default(omit) }}"
     password: "{{ item.password | default(omit) }}"
+    validate_certs: "{{ item.validate_certs | default(omit) }}"
   with_items: "{{ grafana_datasources }}"
